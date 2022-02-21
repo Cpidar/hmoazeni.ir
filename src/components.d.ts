@@ -4,8 +4,14 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Carousel: typeof import('./components/Carousel.vue')['default']
+    Clients: typeof import('./components/Clients.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
+    FeaturesAnimation: typeof import('./components/FeaturesAnimation.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    Header: typeof import('./components/Header.vue')['default']
+    HeroHome: typeof import('./components/HeroHome.vue')['default']
+    PageIllustration: typeof import('./components/PageIllustration.vue')['default']
     README: typeof import('./components/README.md')['default']
   }
 }

@@ -3,9 +3,15 @@ import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
 import App from './App.vue'
 
-import '@unocss/reset/tailwind.css'
-import './styles/main.css'
-import 'uno.css'
+import 'virtual:windi-base.css'
+import 'virtual:windi-components.css'
+import 'virtual:windi-utilities.css'
+// windicss devtools support (dev only)
+import 'virtual:windi-devtools'
+
+// import '@unocss/reset/tailwind.css'
+import './css/style.scss'
+// import 'uno.css'
 
 const routes = setupLayouts(generatedRoutes)
 

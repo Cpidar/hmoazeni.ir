@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +11,13 @@
   <script>
     (function() {
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
-      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+      const darkMode = localStorage.getItem('dark-mode') == 'true'
+      if (darkMode || (prefersDark && darkMode))
         document.documentElement.classList.toggle('dark', true)
     })()
   </script>
 </head>
-<body class="font-sans">
+<body class="font-inter antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 tracking-tight">
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
 </body>

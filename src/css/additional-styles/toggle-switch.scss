@@ -1,0 +1,34 @@
+// Switch element
+.form-switch {
+    @apply relative select-none;
+    width: 44px;
+
+    label {
+        @apply block overflow-hidden cursor-pointer h-6 rounded-full;
+
+        > span:first-child {
+            @apply absolute block rounded-full;
+            width: 20px;
+            height: 20px;
+            top: 2px;
+            // for LTR swith right and left value
+            right: 2px;
+            left: 50%;
+            transition: all .15s ease-out;
+        }
+    }
+
+    input[type="checkbox"] {
+    
+        &:checked {
+
+            + label {
+                @apply bg-teal-500;
+
+                > span:first-child {
+                    right: 22px;
+                }
+            }
+        }
+    }
+}

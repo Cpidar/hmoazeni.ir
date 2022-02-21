@@ -11,7 +11,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
-import Unocss from 'unocss/vite'
+import WindiCSS from 'vite-plugin-windicss'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -55,9 +55,10 @@ export default defineConfig({
       dts: 'src/components.d.ts',
     }),
 
-    // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
-    Unocss(),
+    // https://github.com/antfu/vite-plugin-windicss
+    WindiCSS({
+      safelist: markdownWrapperClasses,
+    }),
 
     // https://github.com/antfu/vite-plugin-md
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
