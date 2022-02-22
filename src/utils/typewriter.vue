@@ -8,7 +8,13 @@
 const typedTextSpan = ref('');
 const isTyping = ref(false)
 const textArray = 
-      ["هویت بصری", "چاپ و ست اداری","طراحی لوگو", "موشن دیزاینر", "طراح و گرافیست"];
+      [
+        "طراح و گرافیست",
+        "چاپ و ست اداری",
+        "UI / UX",
+        "طراحی لوگو",
+        "موشن دیزاینر",
+        ];
 const typingSpeed = 100;
 const erasingSpeed = 100;
 const newTextDelay = 1000; // Delay between current and next text

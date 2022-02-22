@@ -1,6 +1,10 @@
 <template>
   <section>
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
+              <div class="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <h1 class="h2 font-red-hat-display mb-4">افتخار همکاری با</h1>
+          <!-- <p class="text-xl text-gray-600 dark:text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p> -->
+        </div>
       <div class="pb-12 md:pb-20">
 
         <!-- Items -->
