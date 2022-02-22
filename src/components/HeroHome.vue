@@ -10,11 +10,12 @@
               class="h1 lg:text-6xl mb-4 font-red-hat-display font-extrabold"
               data-aos="fade-down"
             >من حسین موذنی هستم</h1>
-            <p
+            <Typewriter></Typewriter>
+            <!-- <p
               class="text-xl text-gray-600 dark:text-gray-400"
               data-aos="fade-down"
               data-aos-delay="150"
-            >Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+            >Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p> -->
 
           </div>
 

@@ -21,7 +21,7 @@
             <img class="transition-opacity duration-300" src="../images/carousel-item-01.jpg" width="540" height="460" alt="Carousel item 01" />
             <div class="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
               <div class="flex flex-grow">
-                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
+                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">مشاهده پروژه</a>
               </div>
               <div class="absolute bottom-0 right-0 p-6">
                 <a class="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out" href="#0">Creative Services</a>
@@ -32,7 +32,7 @@
             <img class="transition-opacity duration-300" src="../images/carousel-item-02.jpg" width="540" height="460" alt="Carousel item 02" />
             <div class="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
               <div class="flex flex-grow">
-                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
+                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">مشاهده پروژه</a>
               </div>
               <div class="absolute bottom-0 right-0 p-6">
                 <a class="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out" href="#0">Creative Services</a>
@@ -43,7 +43,7 @@
             <img class="transition-opacity duration-300" src="../images/carousel-item-03.jpg" width="540" height="460" alt="Carousel item 03" />
             <div class="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
               <div class="flex flex-grow">
-                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
+                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">مشاهده پروژه</a>
               </div>
               <div class="absolute bottom-0 right-0 p-6">
                 <a class="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out" href="#0">Creative Services</a>
@@ -54,7 +54,7 @@
             <img class="transition-opacity duration-300" src="../images/carousel-item-04.jpg" width="540" height="460" alt="Carousel item 04" />
             <div class="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
               <div class="flex flex-grow">
-                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
+                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">مشاهده پروژه</a>
               </div>
               <div class="absolute bottom-0 right-0 p-6">
                 <a class="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out" href="#0">Creative Services</a>
@@ -65,7 +65,7 @@
             <img class="transition-opacity duration-300" src="../images/carousel-item-05.jpg" width="540" height="460" alt="Carousel item 05" />
             <div class="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
               <div class="flex flex-grow">
-                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
+                <a class="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">مشاهده پروژه</a>
               </div>
               <div class="absolute bottom-0 right-0 p-6">
                 <a class="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900 bg-opacity-50 hover:bg-opacity-100 transition duration-150 ease-in-out" href="#0">Creative Services</a>
