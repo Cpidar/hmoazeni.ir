@@ -1,5 +1,6 @@
 import path from 'path'
 import { defineConfig } from 'vite'
+import { promises as fs } from 'fs'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -11,7 +12,9 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import Icons from 'unplugin-icons/vite'
 import WindiCSS from 'vite-plugin-windicss'
+// import Unocss from 'unocss/vite'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -22,6 +25,22 @@ export default defineConfig({
     },
   },
   plugins: [
+    {
+      name: 'fix-swipper-css',
+      enforce: 'pre',
+      resolveId(id) {
+        if (id === 'swiper.css') return 'fix-swiper.css'
+      },
+      async load(id) {
+        if (id === 'fix-swiper.css') {
+          return await fs.readFile(
+            './node_modules/swiper/swiper.min.css',
+            'utf-8',
+          )
+        }
+      },
+    },
+    
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
@@ -59,6 +78,9 @@ export default defineConfig({
     WindiCSS({
       safelist: markdownWrapperClasses,
     }),
+    // Unocss(),
+
+    Icons(),
 
     // https://github.com/antfu/vite-plugin-md
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite

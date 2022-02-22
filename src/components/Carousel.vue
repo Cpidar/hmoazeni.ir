@@ -100,7 +100,7 @@
 <script lang="ts">
 // Import Swiper
 import Swiper, { Autoplay, Navigation } from 'swiper'
-import 'swiper/css'
+import 'swiper.css'
 Swiper.use([Autoplay, Navigation])
 
 export default {
