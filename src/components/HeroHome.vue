@@ -9,7 +9,7 @@
             <h1
               class="h1 lg:text-6xl mb-4 font-red-hat-display font-extrabold"
               data-aos="fade-down"
-            >من حسین موذنی هستم</h1>
+            >من <span class="text-teal-500">حسین موذنی</span> هستم</h1>
             <Typewriter></Typewriter>
             <!-- <p
               class="text-xl text-gray-600 dark:text-gray-400"
@@ -41,7 +41,7 @@
                   </radialGradient>
                 </defs>
               </svg>
-              <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="../images/me.png" width="344" height="674" alt="iPhone mockup" aria-hidden="true" />
+              <img class="relative max-w-full mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none" src="../images/me.webp" width="344" height="674" alt="iPhone mockup" aria-hidden="true" />
 
             </div>
 
