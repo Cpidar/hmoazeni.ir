@@ -1,12 +1,10 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
-  <HeroHome />
-  <FeaturesAnimation />
-  <Carousel id="projects"/>
-  <Clients />
+      <!-- Page sections -->
+      <BlogSingle />
+      <RelatedPosts />
 </template>
 
 <route lang="yaml">

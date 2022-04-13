@@ -33,9 +33,9 @@
         <nav class="hidden md:flex md:flex-grow">
           <!-- Desktop menu links -->
           <ul class="flex flex-grow flex-wrap items-center font-medium">
-            <li>
+            <!-- <li>
               <router-link
-                to="/about"
+                to="#projects"
                 class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
               >درباره من</router-link>
             </li>
@@ -44,7 +44,7 @@
                 to="/blog"
                 class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
               >وبلاگ</router-link>
-            </li>
+            </li> -->
             <!-- <li>
               <router-link to="/testimonials" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out">Testimonials</router-link>
             </li>-->
@@ -174,7 +174,7 @@
                   />
                 </svg>
                 <!-- Links -->
-                <ul>
+                <!-- <ul>
                   <li>
                     <router-link
                       to="/about"
@@ -216,7 +216,7 @@
                       class="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded text-white bg-teal-500 hover:bg-teal-400 transition duration-150 ease-in-out"
                     >Request code</router-link>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </nav>
           </transition>

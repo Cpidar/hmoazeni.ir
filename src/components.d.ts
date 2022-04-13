@@ -4,15 +4,20 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BlogList: typeof import('./components/BlogList.vue')['default']
+    BlogSingle: typeof import('./components/BlogSingle.vue')['default']
     Carousel: typeof import('./components/Carousel.vue')['default']
     Clients: typeof import('./components/Clients.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
+    FeaturedPosts: typeof import('./components/FeaturedPosts.vue')['default']
     FeaturesAnimation: typeof import('./components/FeaturesAnimation.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
+    HeroBlog: typeof import('./components/HeroBlog.vue')['default']
     HeroHome: typeof import('./components/HeroHome.vue')['default']
     PageIllustration: typeof import('./components/PageIllustration.vue')['default']
     README: typeof import('./components/README.md')['default']
+    RelatedPosts: typeof import('./components/RelatedPosts.vue')['default']
   }
 }
 
