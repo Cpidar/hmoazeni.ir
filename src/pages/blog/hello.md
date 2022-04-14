@@ -1,7 +1,8 @@
 ---
 title: hello
 content: hello
+list:
+- src/pages/blog/hello.md
 
 ---
 hello
-<p>world</P>
