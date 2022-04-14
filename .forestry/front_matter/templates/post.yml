@@ -28,3 +28,4 @@ fields:
   label: list
 pages:
 - src/pages/blog/hello.md
+- src/pages/blog/hello2.md
