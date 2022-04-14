@@ -1,6 +1,13 @@
 {
   "custom-field": "title",
-  "custom-list": [],
+  "custom-list": [
+    {
+      "custom-list-item": "hello2"
+    },
+    {
+      "custom-list-item": "hello"
+    }
+  ],
   "custom-object": {
     "custom-line": "description",
     "custom-text": "hello"
