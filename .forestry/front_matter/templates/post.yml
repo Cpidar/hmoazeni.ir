@@ -7,5 +7,14 @@ fields:
   config:
     required: false
   label: title
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: content
 pages:
 - src/pages/blog/hello.md
