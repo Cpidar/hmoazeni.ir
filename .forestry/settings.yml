@@ -5,10 +5,12 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/pages/blog
+  path: posts
   label: blog
   create: documents
   match: "**/*"
+  templates:
+  - post
 upload_dir: assets
 public_path: "/assets"
 front_matter_path: ''
