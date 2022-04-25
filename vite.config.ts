@@ -2,21 +2,26 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import { promises as fs } from 'fs'
 import Vue from '@vitejs/plugin-vue'
+import generateSitemap from 'vite-ssg-sitemap'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
-import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import anchor from "markdown-it-anchor"
+import toc from "markdown-it-table-of-contents"
+import { VitePWA } from 'vite-plugin-pwa'
 import Icons from 'unplugin-icons/vite'
+import IconsResolver from "unplugin-icons/resolver"
 import WindiCSS from 'vite-plugin-windicss'
-// import Unocss from 'unocss/vite'
+import { resolve } from "path"
+import { readFileSync } from "fs"
+import matter from "gray-matter"
 
-const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+
+const markdownWrapperClasses = 'prose prose-sm article-body mb-5 ltr:text-left rtl:text-right'
 
 export default defineConfig({
   resolve: {
@@ -43,11 +48,32 @@ export default defineConfig({
     
     Vue({
       include: [/\.vue$/, /\.md$/],
+      // reactivityTransform: true
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
+      pagesDir: [
+        {
+          dir: "src/pages",
+          baseRoute: "",
+        },
+        {
+          dir: "posts",
+          baseRoute: "posts",
+        },
+      ],
       extensions: ['vue', 'md'],
+      extendRoute(route) {
+        // Get inspired from anthony fu"s personal website
+        // https://github.com/antfu/antfu.me
+        const path = resolve(__dirname, route.component.slice(1))
+        const md = readFileSync(path, "utf-8")
+        const { data } = matter(md)
+        if (path.split(".").pop() == "md") {
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+        }
+      },
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -58,7 +84,6 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
-        'vue-i18n',
         '@vueuse/head',
         '@vueuse/core',
       ],
@@ -72,6 +97,12 @@ export default defineConfig({
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+      resolvers: [
+        IconsResolver({
+          prefix: "",
+          enabledCollections: ['ion']
+        }),
+      ],
     }),
 
     // https://github.com/antfu/vite-plugin-windicss
@@ -80,23 +111,36 @@ export default defineConfig({
     }),
     // Unocss(),
 
-    Icons(),
+    Icons({ compiler: 'vue3' }),
 
     // https://github.com/antfu/vite-plugin-md
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
     Markdown({
+      wrapperComponent: "Post",
       wrapperClasses: markdownWrapperClasses,
       headEnabled: true,
+      markdownItOptions: {
+        html: true,
+        linkify: true,
+        typographer: true,
+      },
       markdownItSetup(md) {
         // https://prismjs.com/
-        md.use(Prism)
+        md.use(Prism),
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
             rel: 'noopener',
           },
-        })
+        }),
+        md.use(anchor, {
+          permalink: true,
+          permalinkBefore: true,
+          permalinkSymbol: "#",
+          permalinkAttrs: () => ({ "aria-hidden": true }),
+        }),
+        md.use(toc)
       },
     }),
 
@@ -105,8 +149,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'robots.txt', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'Hosein Moazeni | Graphic Designer',
+        short_name: 'Hosein Moazeni',
+        description: "Hosein Moazeni`s Portfolio Website",
         theme_color: '#ffffff',
         icons: [
           {
@@ -129,44 +174,22 @@ export default defineConfig({
       },
     }),
 
-    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
-    VueI18n({
-      runtimeOnly: true,
-      compositionOnly: true,
-      include: [path.resolve(__dirname, 'locales/**')],
-    }),
-
-    // https://github.com/antfu/vite-plugin-inspect
-    Inspect({
-      // change this to enable inspect for debugging
-      enabled: false,
-    }),
   ],
 
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
+    onFinished() { generateSitemap() }
   },
 
-  optimizeDeps: {
-    include: [
-      'vue',
-      'vue-router',
-      '@vueuse/core',
-      '@vueuse/head',
-    ],
-    exclude: [
-      'vue-demi',
-    ],
-  },
+  // optimizeDeps: {
+  //   include: [
+  //     'vue',
+  //     'vue-router',
+  //     '@vueuse/core',
+  //     '@vueuse/head',
+  //   ]
+  // },
 
-  // https://github.com/vitest-dev/vitest
-  test: {
-    include: ['test/**/*.test.ts'],
-    environment: 'jsdom',
-    deps: {
-      inline: ['@vue', '@vueuse', 'vue-demi'],
-    },
-  },
 })

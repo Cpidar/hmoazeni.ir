@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col min-h-screen overflow-hidden">
+  <div class="flex flex-col h-screen overflow-hidden">
 
     <!-- Site header -->
-    <Header />
+    <HeaderHome />
 
     <!-- Page content -->
     <main class="flex-grow">
@@ -18,7 +18,7 @@
     </main>
 
     <!-- Site footer -->
-    <Footer />
+    <!-- <Footer /> -->
 
   </div>
   <!-- <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">

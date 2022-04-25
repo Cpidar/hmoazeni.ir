@@ -3,10 +3,10 @@
 </script>
 
 <template>
+  <ClientOnly>
+    <Plum />
+  </ClientOnly>
   <HeroHome />
-  <FeaturesAnimation />
-  <Carousel id="projects"/>
-  <Clients />
 </template>
 
 <route lang="yaml">

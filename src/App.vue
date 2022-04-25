@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AOS from 'aos'
+import Whatsapp from './components/Whatsapp.vue';
 
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,
@@ -16,9 +17,30 @@ useHead({
     { name: 'keywords', content: 'طراحی لوگو' },
     { name: 'keywords', content: 'فتوشاپ' },
     { name: 'keywords', content: 'Adobe Photoshop' },
-    { name: 'author', content: 'حسین موذنی' },    
+    { name: 'author', content: 'حسین موذنی' },
   ],
 })
+
+const whatsapp = [{
+  app: 'whatsapp',
+  name: 'واتساپ',
+  label: '',
+  number: '+989375378963',
+  avatar: {
+    src: '/images/me.webp',
+    alt: ''
+  }
+},
+  {
+  app: 'telegram',
+  name: 'تلگرام',
+  label: '',
+  number: '+989375378963',
+  avatar: {
+    src: '/images/me.webp',
+    alt: ''
+  }
+}]
 
 onMounted(() => AOS.init({
   once: true,
@@ -31,4 +53,5 @@ onMounted(() => AOS.init({
 
 <template>
   <router-view />
+  <Whatsapp :attendants="whatsapp" />
 </template>

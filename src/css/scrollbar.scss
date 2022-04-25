@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    @apply w-7px;
+    &:horizontal {
+      @apply h-7px;
+    }
+  }
+  
+  ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+    @apply rounded-md bg-[#fff] dark:bg-[#050505];
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-[#eee] dark:bg-[#111];
+    &:hover {
+      @apply bg-[#bbb] dark:bg-[#222];
+    }
+  }

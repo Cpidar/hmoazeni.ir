@@ -11,7 +11,8 @@
         </div>
 
         <!-- Custom animation -->
-        <div class="max-w-3xl mx-auto">
+        <div class=" mx-auto grid grid-cols-2">
+          <div class="w-max"></div>
           <div class="relative flex justify-center items-center overflow-hidden">
 
             <!-- Big circle behind: light layout -->
@@ -65,6 +66,7 @@
             <svg class="absolute rounded-full shadow-xl" width="148" height="148" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg">
               <circle cx="74" cy="74" r="74" fill="#2E2E33" fill-rule="evenodd" />
             </svg>
+            
             <!-- Logo -->
             <svg class="absolute w-12 h-12 animate-spin" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <defs>

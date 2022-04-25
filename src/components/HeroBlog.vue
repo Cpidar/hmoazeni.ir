@@ -1,9 +1,23 @@
+<script setup lang="ts">
+import { latestArticle, getArticles } from "~/data"
+import { limitString, slug } from "~/utils"
+
+// Get latest article
+const latest = computed(() => {
+  return latestArticle()
+})
+
+// Get articles data
+const articles = computed(() => {
+  return getArticles(1)
+})
+</script>
+
 <template>
   <section class="relative">
-
     <!-- Background image -->
     <div class="absolute inset-0 h-128 pt-16 box-content -z-1">
-      <img class="absolute inset-0 w-full h-full object-cover opacity-25" src="../images/hero-bg.jpg" width="1440" height="577" alt="About" />
+      <img class="absolute inset-0 w-full h-full object-cover opacity-25" :src="latest.thumbnail" width="1440" height="577" :alt="`blog-banner-${slug(latest.name)}`" />
       <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
     </div>
 
@@ -15,24 +29,17 @@
           <article>
             <header>
               <!-- Title and excerpt -->
-              <div class="text-center md:text-left">
-                <router-link to="/blog-post">
-                  <h1 class="h1 font-red-hat-display mb-4">Appy launches new thematic solutions</h1>
+              <div class="text-center md:text-right">
+                <router-link :to="articles[0].path">
+                  <h1 class="h1 font-red-hat-display mb-4">{{latest.name}}</h1>
                 </router-link>
-                <p class="text-xl text-gray-600 dark:text-gray-400">Curious about how your favorite product was created? Hear from the team about how it was built, and how continued improvements are made.</p>
+                <p class="text-xl text-gray-600 dark:text-gray-400">{{limitString(latest.description, 200)}}</p>
               </div>
               <!-- Article meta -->
               <div class="md:flex md:items-center md:justify-between mt-5">
                 <!-- Author meta -->
                 <div class="flex items-center justify-center">
-                  <a href="#0">
-                    <img class="rounded-full flex-shrink-0 mr-3" src="../images/news-author-01.jpg" width="32" height="32" alt="Author 04" />
-                  </a>
-                  <div>
-                    <span class="text-gray-600 dark:text-gray-400">By </span>
-                    <a class="font-medium text-gray-800 dark:text-gray-300 hover:underline" href="#0">Micheal Osman</a>
-                    <span class="text-gray-600 dark:text-gray-400"> · Nov 2, 2020</span>
-                  </div>
+                  <Tag :tags="latest.tags" class="mb-5 flex flex-wrap flex-row justify-start" />
                 </div>
               </div>
             </header>
@@ -44,9 +51,3 @@
 
   </section>
 </template>
-
-<script>
-export default {
-  name: 'HeroBlog',
-}
-</script>

@@ -1,6 +1,4 @@
 import { defineConfig } from 'windicss/helpers'
-import typography from 'windicss/plugin/typography'
-import aspectRatio from 'windicss/plugin/aspect-ratio'
 import forms from 'windicss/plugin/forms'
 
 export default defineConfig({

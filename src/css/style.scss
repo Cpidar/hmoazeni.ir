@@ -6,6 +6,9 @@
 @import 'additional-styles/toggle-switch.scss';
 @import 'additional-styles/theme.scss';
 @import 'font.scss';
+@import 'markdown.scss';
+@import 'scrollbar.scss';
+@import 'ngprogress.scss';
 
 // Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive
 @responsive {
