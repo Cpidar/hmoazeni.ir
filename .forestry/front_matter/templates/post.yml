@@ -40,5 +40,3 @@ fields:
   config:
     maxSize: 64
   label: thumbnail
-pages:
-- posts/test.md
