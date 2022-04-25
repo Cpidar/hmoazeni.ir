@@ -2,6 +2,9 @@
 label: post
 hide_body: false
 fields:
+- name: featured
+  type: boolean
+  label: featured
 - name: title
   type: text
   config:
@@ -37,8 +40,5 @@ fields:
   config:
     maxSize: 64
   label: thumbnail
-- name: featured
-  type: boolean
-  label: featured
 pages:
 - posts/test.md
