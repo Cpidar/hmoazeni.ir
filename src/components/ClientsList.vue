@@ -14,7 +14,7 @@
 
         <!-- Section header -->
         <div class="max-w-3xl mx-auto text-center mt-20 pb-12 md:pb-20">
-          <h2 class="h2 font-red-hat-display mb-4">تعدادی از نمونه کارها</h2>
+          <h2 class="h2 font-red-hat-display mb-4">افتخار همکاری با</h2>
           <!-- <p class="text-xl text-gray-600 dark:text-gray-400">تعدادی از پروژه هایی</p> -->
         </div>
         <!-- Items -->

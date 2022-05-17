@@ -63,9 +63,8 @@
             </div>
 
             <!-- Inner cricle -->
-            <svg class="absolute rounded-full shadow-xl" width="148" height="148" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="74" cy="74" r="74" fill="#2E2E33" fill-rule="evenodd" />
-            </svg>
+            <img class="absolute w-64 mx-auto md:mr-0 md:max-w-none h-auto pointer-events-none"
+                src="/images/me.webp" width="432" height="432" alt="iPhone mockup" aria-hidden="true" />
             
             <!-- Logo -->
             <svg class="absolute w-12 h-12 animate-spin" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">

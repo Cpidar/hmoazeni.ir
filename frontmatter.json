@@ -1,0 +1,75 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "other",
+  "frontMatter.content.publicFolder": "[[workspace]]/public",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/posts"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "previewPath": null,
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Name",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Article thumbnail",
+          "name": "thumbnail",
+          "type": "image"
+        },
+        {
+          "title": "Is featured",
+          "name": "featured",
+          "type": "boolean"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "keywords",
+          "name": "keywords",
+          "type": "choice",
+          "choices": [
+            "brightness",
+            "luminance",
+            "value",
+            "مفهوم روشنایی"
+          ]
+        },
+        {
+          "title": "lastmod",
+          "name": "lastmod",
+          "type": "datetime"
+        }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.tags": [
+    "vue"
+  ],
+  "frontMatter.content.autoUpdateDate": true,
+  "frontMatter.content.fmHighlight": true,
+  "frontMatter.framework.startCommand": "pnpm dev",
+  "frontMatter.preview.host": "http//localhost:3333/posts/"
+}

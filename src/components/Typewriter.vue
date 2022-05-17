@@ -1,18 +1,19 @@
 <template>
-<p class="text-2xl text-gray-600 dark:text-gray-400">
+<span class="text-2xl text-gray-600 dark:text-gray-400">
   <slot></slot>
-  <span class="typed-text">{{typedTextSpan}}</span><span :class="{'cursor': true, 'typing': isTyping}"> &nbsp;</span>
-  </p>
+  <span class="typed-text text-pink-500">{{typedTextSpan}}</span><span :class="{'cursor': true, 'typing': isTyping}"> &nbsp;</span>
+  </span>
 </template>
 <script lang="ts" setup>
+
 const typedTextSpan = ref('');
 const isTyping = ref(false)
 const textArray = 
       [
         "طراح و گرافیست",
-        "چاپ و ست اداری",
-        "UI / UX",
-        "طراحی لوگو",
+        "مشاور و ایده پرداز",
+        "طراح لوگو",
+        "طراح UI / UX",
         "موشن دیزاینر",
         ];
 const typingSpeed = 100;

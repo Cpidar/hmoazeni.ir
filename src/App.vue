@@ -9,6 +9,7 @@ useHead({
   title: 'حسین موذنی | طراح و گرافیست',
   meta: [
     { name: 'description', content: 'وبسایت شخصی حسین موذنی' },
+    { name: 'description', content: "با تلفیق هنر و تکنولوژی در خلق عناصر بصری چاپی و دیجیتال به شما کمک می کنم داستان برند خود را بسازید."},
     { name: 'keywords', content: 'طراح گرافیک' },
     { name: 'keywords', content: 'موشن گرافیک' },
     { name: 'keywords', content: 'UI / UX Designer' },
@@ -53,5 +54,5 @@ onMounted(() => AOS.init({
 
 <template>
   <router-view />
-  <Whatsapp :attendants="whatsapp" />
+  <!-- <Whatsapp :attendants="whatsapp" /> -->
 </template>

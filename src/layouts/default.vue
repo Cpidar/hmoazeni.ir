@@ -2,7 +2,7 @@
   <div class="flex flex-col min-h-screen overflow-hidden">
 
     <!-- Site header -->
-    <Header />
+    <HeaderHome />
 
     <!-- Page content -->
     <main class="flex-grow">
@@ -19,6 +19,7 @@
 
     <!-- Site footer -->
     <Footer />
+
   </div>
   <!-- <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
     <router-view />
