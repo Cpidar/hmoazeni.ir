@@ -13,11 +13,19 @@ import 'virtual:windi-devtools'
 
 import './css/style.scss'
 
-const routes = setupLayouts(generatedRoutes)
+const routes = setupLayouts(generatedRoutes.map((i) => {
+  return {
+    ...i,
+    alias: i.path.endsWith('/')
+      ? `${i.path}index.html`
+      : `${i.path}.html`,
+  }
+}))
 
 const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
   if (savedPosition) return savedPosition
-  if (to.hash) {    return {
+  if (to.hash) {
+    return {
       el: to.hash,
       behavior: "smooth"
     }
