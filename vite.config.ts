@@ -19,6 +19,7 @@ import WindiCSS from 'vite-plugin-windicss'
 import { resolve } from "path"
 import { readFileSync } from "fs"
 import matter from "gray-matter"
+import ViteRadar from 'vite-plugin-radar'
 
 
 const markdownWrapperClasses = 'prose prose-sm article-body mb-5 ltr:text-left rtl:text-right'
@@ -205,6 +206,23 @@ export default defineConfig({
         ],
       },
     }),
+
+    ViteRadar({
+      // Google Analytics tag injection
+      analytics: [
+        {
+        id: 'G-BGH1QBMH1H',
+      }
+    ],
+    gtm: [
+      {
+      id: 'GTM-KJ5G5RV'
+    }
+  ],
+
+  
+
+    })
 
   ],
 

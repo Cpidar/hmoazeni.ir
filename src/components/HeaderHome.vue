@@ -34,9 +34,9 @@ import IconDribbble from '~icons/ion/logo-dribbble'
             <span class="hidden md:inline">وبلاگ</span>
             <icon-blog class="md:hidden" />
           </router-link>
-          <router-link to="/skills" class="hidden md:inline mx-2 my-auto !outline-none">
+          <!-- <router-link to="/skills" class="hidden md:inline mx-2 my-auto !outline-none">
             <span>درباره من</span>
-          </router-link>
+          </router-link> -->
           <router-link to="/projects" class="mx-2 my-auto !outline-none">
             <span class="hidden md:inline">پروژه ها</span>
             <icon-light class="md:hidden" />
