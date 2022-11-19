@@ -71,7 +71,8 @@ export default defineConfig({
         const path = resolve(__dirname, route.component.slice(1))
         const md = readFileSync(path, "utf-8")
         const { data } = matter(md)
-        if (path.split(".").pop() == "md") {
+        console.log(path)
+        if (path.split(".").pop() === "md") {
           route.meta = Object.assign(route.meta || {}, { frontmatter: data })
         }
       },

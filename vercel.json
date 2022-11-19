@@ -1,3 +1,6 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/" },
+        { "source": "https://app.hmoazeni.ir/(.*)", "destination": "https://directus.onfing.ir/admin/(.*)" }
+    ]
 }

@@ -5,7 +5,7 @@ import type { RelatedArticles, PaginateData } from "~/types"
 const getDataRoutes = () => {
   const router = useRouter()
   const routes = router.getRoutes()
-  return routes
+  return routes.filter((data) => data.aliasOf === undefined)
 }
 
 // Get params's value from url
@@ -35,6 +35,7 @@ export const latestArticle = () => {
 
 // Filter data to get specific articles based on tags
 export const getArticlesTags = (tags: Array<string>) => {
+  console.log(getDataRoutes())
   const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0 && data.meta.frontmatter !== undefined)
   const filter = isPosts.filter((tag: any) =>
     tags.every((filter) => tag.meta.frontmatter.tags.includes(filter)),

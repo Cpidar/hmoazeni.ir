@@ -16,8 +16,6 @@ declare module '@vue/runtime-core' {
     HeaderHome: typeof import('./components/HeaderHome.vue')['default']
     HeroBlog: typeof import('./components/HeroBlog.vue')['default']
     HeroHome: typeof import('./components/HeroHome.vue')['default']
-    IonArrowBackOutline: typeof import('~icons/ion/arrow-back-outline')['default']
-    IonArrowForwardOutline: typeof import('~icons/ion/arrow-forward-outline')['default']
     PageIllustration: typeof import('./components/PageIllustration.vue')['default']
     Paginate: typeof import('./components/Paginate.vue')['default']
     Plum: typeof import('./components/plum.vue')['default']
