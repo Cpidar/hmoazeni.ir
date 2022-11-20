@@ -1,14 +1,15 @@
 ---
 name: شرکت آرتاپخش
 description: نمونه کار طراحی لوگو و برندینگ
-thumbnail: /images/artapakhsh/Arta Logo (7).webp
+thumbnail: /images/artapakhsh/ArtaLogo(7).webp
 tags:
   - showcase
-date: '2022-11-19T20:30:00.000Z'
+date: 2022-11-19T20:30:00.000Z
+lastmod: 2022-11-20T20:53:55.663Z
 ---
 
-![](</images/artapakhsh/Arta Logo (7).webp> "")
+![](</images/artapakhsh/ArtaLogo(7).webp> "")
 
-![](</images/artapakhsh/Arta Logo (1).webp> "")
+![](</images/artapakhsh/ArtaLogo(1).webp> "")
 
-![](</images/artapakhsh/Arta Logo (6).webp> "")
+![](</images/artapakhsh/ArtaLogo(6).webp> "")

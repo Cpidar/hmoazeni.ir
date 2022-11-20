@@ -5,9 +5,9 @@ thumbnail: /images/mazhabi_tract/2.webp
 tags:
   - showcase
 date: 2022-11-19T20:30:00.000Z
-lastmod: 2022-11-20T18:27:54.387Z
+lastmod: 2022-11-20T21:08:50.890Z
 ---
 
-![](</images/mazhabi_tract/1.jpg>)
+![](</images/mazhabi_tract/1.webp>)
 
-![](</images/mazhabi_tract/2.jpg>)
+![](</images/mazhabi_tract/2.webp>)
