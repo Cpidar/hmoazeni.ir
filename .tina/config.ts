@@ -27,8 +27,8 @@
           fields: [
             {
               type: "string",
-              name: "title",
-              label: "Title",
+              name: "name",
+              label: "Name",
               isTitle: true,
               required: true,
             },
@@ -42,12 +42,20 @@
               name: 'thumbnail',
               type: 'image',
               label: 'Thumbnail',
+              required: true
              },
             {
               label: 'Tags',
               name: 'tags',
               type: 'string',
               list: true,
+              required: true,
+              options: [
+                {
+                  value: "showcase",
+                  label: "Showcase"
+                }
+              ]
             },
             {
               label: "Date",

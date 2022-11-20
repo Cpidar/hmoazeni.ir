@@ -26,20 +26,20 @@ export const getArticles = (limit?: number) => {
 // Get the latest article
 export const latestArticle = () => {
   const frontmatter = getDataRoutes()
-    .filter((data) => data.meta.frontmatter !== undefined)
+    .filter((data) => Object.keys(data.meta).length !== 0 && data.meta.frontmatter !== undefined)
     .map((data) => data.meta.frontmatter)
     .sort((a: any, b: any) => +new Date(b.date) - +new Date(a.date))
-  const latestPost: unknown = frontmatter[0]
+  const latestPost = frontmatter[0]
   return latestPost
 }
 
 // Filter data to get specific articles based on tags
 export const getArticlesTags = (tags: Array<string>) => {
-  console.log(getDataRoutes())
   const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0 && data.meta.frontmatter !== undefined)
   const filter = isPosts.filter((tag: any) =>
     tags.every((filter) => tag.meta.frontmatter.tags.includes(filter)),
   )
+  .sort((a: any, b: any) => +new Date(b.date) - +new Date(a.date))
   return filter
 }
 
