@@ -1,6 +1,6 @@
 ---
 name: مفهوم روشنایی و اصطلاحات آن
-thumbnail: https://cdn.image4.io/hmoazeni/f_auto/67ca7d6f-a0b7-4cc9-a74f-5c1e8d50bf75.jpg
+thumbnail: /images/42e948322657d58927f3f3d401fdebea.jpg
 date: 2022-04-30T14:49:26.335Z
 description: روشنایی به طور کلی بیانگر میزان شدت یا انرژی نور است. مقدار مطلق شدت نور توسط
   luminance توصیف میشود در حالیکه brightness یا value بیانگر درک نسبی ما از
@@ -14,7 +14,7 @@ keywords:
   - luminance
   - value
   - مفهوم روشنایی
-lastmod: 2022-04-30T15:23:17.208Z
+lastmod: 2022-11-21T20:03:48.641Z
 ---
 
 [[toc]]

@@ -2,10 +2,11 @@
 import { paginateData } from "~/data"
 import { slug, limitString } from "~/utils"
 
-const props = defineProps<{ articles: any, title: string }>()
+const props = defineProps<{ articles: any, title: string, page?: number }>()
+// const router = useRouter()
 
 // Get articles data
-const currentPage = ref<number>(1)
+const currentPage = ref<number>(+props.page || 1)
 const articles = computed(() => {
   const articles = props.articles
   const paginate = paginateData({
@@ -16,15 +17,19 @@ const articles = computed(() => {
   return paginate
 })
 
+
+
 // Pagination
 const clickStartPage = () => {
+  // router.push({ name: "blog", params: { page: articles.value.startPage } })
   currentPage.value = articles.value.startPage
 }
 const clickPaginate = (paginate: number) => {
-  console.log(paginate)
+  // router.push({ name: "blog", params: { page: paginate } })
   currentPage.value = paginate
 }
 const clickEndPage = () => {
+  // router.push({ name: "blog", params: { page: articles.value.endPage } })
   currentPage.value = articles.value.endPage
 }
 </script>

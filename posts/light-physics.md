@@ -1,6 +1,6 @@
 ---
 name: آنچه که یک هنرمند دیجیتال در مورد فیزیک نور باید بداند
-thumbnail: https://cdn.image4.io/hmoazeni/f_auto/e723f63c-0792-4a91-a9f3-2430f003a281.png
+thumbnail: /images/Picture1.png
 date: 2022-04-26T17:08:51.696Z
 description: Elucidator blog starter is a starter blog built with Vue 3, Typescript and
   Vite. You can create and publish your post just with markdown file :D.
@@ -10,6 +10,7 @@ tags:
   - vite starter
   - vue starter
 featured: false
+lastmod: 2022-11-21T20:04:18.338Z
 ---
 
 [[toc]]
